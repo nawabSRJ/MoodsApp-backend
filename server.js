@@ -7,7 +7,7 @@ import Post from './models/post.js';
 import cors from 'cors';  // Import CORS middleware
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8080;
 
 // Body Parser Middleware
 app.use(express.json());
