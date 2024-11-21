@@ -13,10 +13,11 @@ const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Enable CORS
+// Enable CORS for both applications
 app.use(cors({
-    origin: 'https://moodsapp.netlify.app'  // Replace with your Netlify app URL
+    origin: ['https://moodsapp.netlify.app', 'https://crushcalci.netlify.app']
 }));
+
 
 // Setup Static folder
 const __filename = fileURLToPath(import.meta.url);
